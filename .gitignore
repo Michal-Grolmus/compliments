@@ -1,0 +1,18 @@
+# Obecné
+node_modules/
+dist/
+build/
+.DS_Store
+
+# SAP UI5
+/webapp/neo-app.json
+/webapp/resources/
+.webapp/localService/mockserver.js
+
+# Backend
+/backend/node_modules/
+/backend/.env
+
+# Editor a systémové soubory
+.vscode/
+*.log

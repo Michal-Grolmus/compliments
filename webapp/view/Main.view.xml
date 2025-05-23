@@ -1,0 +1,93 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    controllerName="lichotky.app.controller.Main"
+    displayBlock="true"
+    height="100%"
+>
+    <f:DynamicPage>
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title
+                        text="{i18n>appTitle}"
+                        level="H1"
+                    />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+
+        <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <FlexBox
+                    alignItems="Start"
+                    justifyContent="SpaceBetween"
+                >
+                    <items>
+                        <Panel
+                            backgroundDesign="Transparent"
+                            class="sapUiNoContentPadding"
+                        >
+                            <content>
+                                <Label
+                                    text="{i18n>instruction}"
+                                    class="sapUiSmallMargin"
+                                />
+                            </content>
+                        </Panel>
+                    </items>
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <f:content>
+            <VBox
+                class="sapUiSmallMargin"
+                width="100%"
+                renderType="Bare"
+            >
+                <Label text="{i18n>employeeLabel}" />
+                <Input
+                    id="employeeInput"
+                    width="100%"
+                    placeholder="{i18n>employeePlaceholder}"
+                    liveChange=".onNameChange"
+                />
+
+                <Label
+                    text="{i18n>attributesLabel}"
+                    class="sapUiSmallMarginTop"
+                />
+
+                <ScrollContainer
+                    height="400px"
+                    vertical="true"
+                >
+                    <VBox
+                        id="attributesContainer"
+                        items="{attributes>/categories}"
+                    >
+                        <Panel
+                            headerText="{attributes>name}"
+                            expandable="true"
+                            expanded="true"
+                        >
+                            <VBox items="{attributes>attributes}">
+                                <CheckBox text="{attributes>}" />
+                            </VBox>
+                        </Panel>
+                    </VBox>
+                </ScrollContainer>
+
+                <Button
+                    text="{i18n>generateButton}"
+                    press=".onGenerate"
+                    class="sapUiSmallMarginTop"
+                    type="Emphasized"
+                />
+            </VBox>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

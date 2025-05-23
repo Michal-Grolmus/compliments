@@ -1,0 +1,17 @@
+{
+  "employees": [
+    { "name": "Ondřej Dědina", "role": "Ředitel společnosti" },
+    { "name": "Antonín Cihlář", "role": "Ředitel poradenství" },
+    { "name": "Jan Filip", "role": "Obchodní ředitel" },
+    { "name": "Kateřina Štěpánková", "role": "Finanční ředitelka" },
+    { "name": "Vladimír Vaněček", "role": "Marketingový ředitel" },
+    { "name": "Zdeněk Ira", "role": "Vedoucí divize ERP" },
+    { "name": "Daniel Frémund", "role": "Vedoucí divize ERP Public Cloud" },
+    { "name": "Jaroslav Páleník", "role": "Vedoucí divize HCM" },
+    { "name": "Jan Peč", "role": "Vedoucí divize Business Intelligence" },
+    { "name": "Karel Moldřík", "role": "Vedoucí divize Vývoj SAP" },
+    { "name": "Roman Pavlovský", "role": "Vedoucí divize Utility a technologie" },
+    { "name": "Jan Hadač", "role": "Vedoucí divize Projektové řízení" },
+    { "name": "Martin Benešovský", "role": "Vedoucí divize BC/IT" }
+  ]
+}
