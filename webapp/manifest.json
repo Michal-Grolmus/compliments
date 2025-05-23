@@ -25,6 +25,7 @@
     },
     "resources": {
       "css": []
-    }
+    },
+    "theme": "sap_fiori_3"
   }
 }

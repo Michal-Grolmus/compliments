@@ -7,13 +7,15 @@
     displayBlock="true"
     height="100%"
 >
-    <f:DynamicPage>
+    <f:DynamicPage 
+		showFooter="true">
         <f:title>
             <f:DynamicPageTitle>
                 <f:heading>
                     <Title
                         text="{i18n>appTitle}"
                         level="H1"
+                        wrapping="true"
                     />
                 </f:heading>
             </f:DynamicPageTitle>
@@ -34,6 +36,7 @@
                                 <Label
                                     text="{i18n>instruction}"
                                     class="sapUiSmallMargin"
+                                    wrapping="true"
                                 />
                             </content>
                         </Panel>
@@ -44,11 +47,13 @@
 
         <f:content>
             <VBox
-                class="sapUiSmallMargin"
+                class="sapUiSmallMargin sapUiResponsivePadding--header sapUiResponsivePadding--content"
                 width="100%"
                 renderType="Bare"
             >
-                <Label text="{i18n>employeeLabel}" />
+                <Label 
+                    text="{i18n>employeeLabel}"
+                    wrapping="true" />
                 <Input
                     id="employeeInput"
                     width="100%"
@@ -59,35 +64,36 @@
                 <Label
                     text="{i18n>attributesLabel}"
                     class="sapUiSmallMarginTop"
+                    wrapping="true"
                 />
 
-                <ScrollContainer
-                    height="400px"
-                    vertical="true"
+                <VBox
+                    id="attributesContainer"
+                    items="{attributes>/categories}"
                 >
-                    <VBox
-                        id="attributesContainer"
-                        items="{attributes>/categories}"
+                    <Panel
+                        headerText="{attributes>name}"
+                        expandable="true"
+                        expanded="true"
                     >
-                        <Panel
-                            headerText="{attributes>name}"
-                            expandable="true"
-                            expanded="true"
-                        >
-                            <VBox items="{attributes>attributes}">
-                                <CheckBox text="{attributes>}" />
-                            </VBox>
-                        </Panel>
-                    </VBox>
-                </ScrollContainer>
+                        <VBox items="{attributes>attributes}">
+                            <CheckBox text="{attributes>}" wrapping="true" />
+                        </VBox>
+                    </Panel>
+                </VBox>
+            </VBox>
+        </f:content>
 
+        <f:footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
                 <Button
                     text="{i18n>generateButton}"
                     press=".onGenerate"
-                    class="sapUiSmallMarginTop"
                     type="Emphasized"
                 />
-            </VBox>
-        </f:content>
+                <ToolbarSpacer/>
+            </OverflowToolbar>
+        </f:footer>
     </f:DynamicPage>
 </mvc:View>
