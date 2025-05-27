@@ -1,10 +1,27 @@
 {
+  "_version": "1.32.0",
   "sap.app": {
     "id": "lichotky.app",
     "type": "application",
     "title": "lichotky.app",
     "applicationVersion": {
       "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
     }
   },
   "sap.ui5": {
@@ -26,6 +43,10 @@
     "resources": {
       "css": []
     },
-    "theme": "sap_fiori_3"
+    "theme": "sap_fiori_3",
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    }
   }
 }
