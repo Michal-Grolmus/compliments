@@ -1,0 +1,114 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    controllerName="lichotky.app.controller.Main"
+    displayBlock="true"
+    height="100%"
+>
+    <!-- Main application page using Fiori DynamicPage for responsive layout and floating footer support -->
+    <f:DynamicPage 
+        showFooter="true">
+        
+        <!-- Page title section with application heading -->
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <!-- Application title, localized via i18n -->
+                    <Title
+                        text="{i18n>appTitle}"
+                        level="H1"
+                        wrapping="true"
+                    />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+
+        <!-- Collapsible header section with instructions for the user -->
+        <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <FlexBox
+                    alignItems="Start"
+                    justifyContent="SpaceBetween"
+                >
+                    <items>
+                        <Panel
+                            backgroundDesign="Transparent"
+                            class="sapUiNoContentPadding"
+                        >
+                            <content>
+                                <!-- Instruction label, localized via i18n -->
+                                <Label
+                                    text="{i18n>instruction}"
+                                    class="sapUiSmallMargin"
+                                    wrapping="true"
+                                />
+                            </content>
+                        </Panel>
+                    </items>
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <!-- Main content area: user input and attribute selection -->
+        <f:content>
+            <VBox
+                class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
+                width="100%"
+                renderType="Bare"
+            >
+                <!-- Employee name label and input field -->
+                <Label 
+                    text="{i18n>employeeLabel}"
+                    wrapping="true" />
+                <Input
+                    id="employeeInput"
+                    width="100%"
+                    class="sapUiForceWidthAuto"
+                    placeholder="{i18n>employeePlaceholder}"
+                    liveChange=".onNameChange"
+                />
+
+                <!-- Attributes section label -->
+                <Label
+                    text="{i18n>attributesLabel}"
+                    class="sapUiSmallMarginTop"
+                    wrapping="true"
+                />
+
+                <!-- Dynamic list of attribute categories and their checkboxes -->
+                <VBox
+                    id="attributesContainer"
+                    items="{attributes>/categories}"
+                >
+                    <!-- Each category is rendered as a collapsible panel -->
+                    <Panel
+                        headerText="{attributes>name}"
+                        expandable="true"
+                        expanded="true"
+                    >
+                        <!-- List of checkboxes for each attribute in the category -->
+                        <VBox items="{attributes>attributes}">
+                            <!-- Attribute checkbox, text is localized and wrapping enabled for mobile -->
+                            <CheckBox text="{attributes>}" wrapping="true" />
+                        </VBox>
+                    </Panel>
+                </VBox>
+            </VBox>
+        </f:content>
+
+        <!-- Floating footer with the main action button -->
+        <f:footer>
+            <OverflowToolbar>
+                <!-- Main action button to generate a compliment, emphasized for visibility -->
+                <Button
+                    text="{i18n>generateButton}"
+                    press=".onGenerate"
+                    type="Emphasized"
+                    width="100%"
+                />
+            </OverflowToolbar>
+        </f:footer>
+    </f:DynamicPage>
+</mvc:View>

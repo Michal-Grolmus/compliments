@@ -1,0 +1,76 @@
+{
+  "categories": [
+    {
+      "name": "categoryResponsibility",
+      "attributes": [
+        "attributeDiligence",
+        "attributeLeadership",
+        "attributeLoyalty",
+        "attributeInnovation"
+      ]
+    },
+    {
+      "name": "categoryRelations",
+      "attributes": [
+        "attributeFamilyCare",
+        "attributeJoyBringer",
+        "attributeLoyalInRelations",
+        "attributeInspiration"
+      ]
+    },
+    {
+      "name": "categoryValues",
+      "attributes": [
+        "attributePerseverance",
+        "attributeModesty",
+        "attributeHonesty",
+        "attributeOptimism"
+      ]
+    },
+    {
+      "name": "categoryPersonality",
+      "attributes": [
+        "attributeKindness",
+        "attributeEmpathy",
+        "attributeHelpfulness",
+        "attributeHumor",
+        "attributeWisdom",
+        "attributeListening",
+        "attributeReliability",
+        "attributeConfidenceOrHumility",
+        "attributePatience"
+      ]
+    },
+    {
+      "name": "categoryAppearance",
+      "attributes": [
+        "attributeSmile",
+        "attributeEyes",
+        "attributeHair",
+        "attributeClothing",
+        "attributeElegance",
+        "attributeNaturalBeauty",
+        "attributeTaste"
+      ]
+    },
+    {
+      "name": "categorySkills",
+      "attributes": [
+        "attributeJudgment",
+        "attributeCreativity",
+        "attributeLogic",
+        "attributeLearning",
+        "attributeMemory"
+      ]
+    },
+    {
+      "name": "categoryPractical",
+      "attributes": [
+        "attributeCooking",
+        "attributeCrafts",
+        "attributeOrganization",
+        "attributeTechnical"
+      ]
+    }
+  ]
+}

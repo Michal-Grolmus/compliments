@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Generátor lichotek</title>
+  <!-- 
+    Responsive viewport meta tag for proper scaling on mobile devices.
+    Ensures the UI5 application is displayed correctly on all screen sizes.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    OpenUI5 bootstrap script.
+    - Loads the Fiori 3 theme.
+    - Sets the resource root for the application namespace.
+    - Enables asynchronous loading and component support.
+    - Automatically boots the UI5 application.
+  -->
+  <script id="sap-ui-bootstrap" src="https://sdk.openui5.org/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_fiori_3"
+    data-sap-ui-resourceroots='{"lichotky.app": "./"}'
+    data-sap-ui-async="true"
+    data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"
+    data-sap-ui-autoboot="true">
+  </script>
+
+  <style>
+    /* Ensure the HTML and body elements take full height for proper layout */
+    html, body {
+      height: 100%;
+    }
+  </style>
+
+</head>
+
+<body class="sapUiBody sapUiSizeCozy" id="content">
+  <!-- 
+    UI5 Component Container:
+    - Loads the main application component (lichotky.app).
+    - Sets the container height to 100% for full-page layout.
+    - Assigns a unique ID for the component instance.
+  -->
+  <div data-sap-ui-component
+    data-name="lichotky.app"
+    data-height="100%"
+    data-id="container"
+    data-settings='{"id" : "lichotky.app"}'
+    style="height: 100%">
+  </div>
+</body>
+
+</html>
